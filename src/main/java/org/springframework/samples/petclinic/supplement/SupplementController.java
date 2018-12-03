@@ -38,9 +38,9 @@ public class SupplementController {
 		LOG.debug(results.toString());
 
 //        DEMO: Show Exception is thrown
-        if (true) {
+/*        if (true) {
             throw new RuntimeException("KEYBOARD NOT FOUND, PRESS F1 TO CONTINUE");
-        }
+        }*/
         return "supplements/supplementList";
     }
 
