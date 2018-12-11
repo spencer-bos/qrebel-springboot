@@ -81,7 +81,11 @@ class OwnerController {
         if (owner.getLastName() == null) {
             owner.setLastName(""); // empty string signifies broadest possible search
         }
-
+        try {
+            Thread.sleep(5000); // fake delay
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // find owners by last name
         Collection<Owner> results = this.owners.findByLastName(owner.getLastName());
         if (results.isEmpty()) {
