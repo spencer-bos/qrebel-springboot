@@ -13,8 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
@@ -71,11 +70,11 @@ public class SupplementController {
     private String getRemoteSupplementsJson() {
         StringBuilder sb = new StringBuilder();
 //        DEMO: Show slow request example
-        try {
+/*        try {
             Thread.sleep(13000); // fake delay
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         try {
             String spec = "http://supplements-service:8080/supplements/";
@@ -83,6 +82,15 @@ public class SupplementController {
 
             URL url = new URL(spec);
             URLConnection urlConnection = url.openConnection();
+
+            urlConnection.setConnectTimeout(4000);
+            try {
+                urlConnection.connect();
+            } catch (UnknownHostException | SocketTimeoutException | ConnectException e) {
+                System.out.println("Whoops! Service not available, serving static data. 8-)");
+                return getLocalSupplementsJSon();
+            }
+
             InputStream inputStream = urlConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             String line;

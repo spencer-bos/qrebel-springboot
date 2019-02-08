@@ -6,7 +6,15 @@
 <body>
 
   <h2>Veterinarians</h2>
-
+  <p>Statistics</p>
+  <p>
+    <p>Total veterinarians -> <span th:text="${totalVets}"></span></p>
+  <ul>
+      <li th:each="key: ${vetsSpecs.keySet()}">
+          <span th:text="${key}"></span> -> <span th:text="${vetsSpecs.get(key)}"></span>
+      </li>
+  </ul>
+  </p>
   <table id="vets" class="table table-striped">
     <thead>
       <tr>
