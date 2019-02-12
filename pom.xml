@@ -285,7 +285,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <version>2.19.1</version>
+            <version>2.22.0</version>
             <executions>
                 <execution>
                     <id>run-integration-tests</id>
@@ -299,6 +299,7 @@
             <configuration>
                 <skipTests>${skipTests}</skipTests>
                 <skipITs>${skipITs}</skipITs>
+                <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
             </configuration>
         </plugin>
       <!-- Spring Boot Actuator displays build-related information if a git.properties
