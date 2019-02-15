@@ -303,7 +303,7 @@
             <configuration>
                 <skipTests>${skipTests}</skipTests>
                 <skipITs>${skipITs}</skipITs>
-                <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+                <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
             </configuration>
         </plugin>
       <!-- Spring Boot Actuator displays build-related information if a git.properties
