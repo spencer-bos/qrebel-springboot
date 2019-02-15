@@ -997,7 +997,7 @@ insert into vets values (996, 'Shelden', 'Kevlin', 'Cookies - Amaretto');
 insert into vets values (997, 'Lek', 'Denmead', 'Lamb Tenderloin Nz Fr');
 insert into vets values (998, 'Nanon', 'Woollhead', 'Cheese - Blue');
 insert into vets values (999, 'Timmy', 'Hudleston', 'Vodka - Hot, Lnferno');
-insert into vets values (1000, 'Leyla', 'Jaray', 'Fond - Chocolate');/*
+insert into vets values (1000, 'Leyla', 'Jaray', 'Fond - Chocolate');
 insert into vets values (1001, 'Ami', 'Pash', 'Plymouth');
 insert into vets values (1002, 'Benedicto', 'Awcock', 'Cadillac');
 insert into vets values (1003, 'Ervin', 'Eastup', 'Chevrolet');
@@ -2997,7 +2997,7 @@ insert into vets values (2996, 'Laurella', 'Banbrigge', 'Ranger');
 insert into vets values (2997, 'Bartolemo', 'Klaussen', 'Jetta');
 insert into vets values (2998, 'Hank', 'Mawditt', 'V8 Vantage');
 insert into vets values (2999, 'Lura', 'McVeighty', 'E250');
-insert into vets values (3000, 'Dario', 'Drummond', 'Ram Van B250');*/
+insert into vets values (3000, 'Dario', 'Drummond', 'Ram Van B250');
 
 INSERT INTO specialties VALUES (1, 'radiology');
 INSERT INTO specialties VALUES (2, 'surgery');
@@ -4002,7 +4002,7 @@ INSERT INTO vet_specialties VALUES (996,1);
 INSERT INTO vet_specialties VALUES (997,1);
 INSERT INTO vet_specialties VALUES (998,2);
 INSERT INTO vet_specialties VALUES (999,2);
-INSERT INTO vet_specialties VALUES (1000,3);/*
+INSERT INTO vet_specialties VALUES (1000,3);
 INSERT INTO vet_specialties VALUES (1001,2);
 INSERT INTO vet_specialties VALUES (1002,2);
 INSERT INTO vet_specialties VALUES (1003,2);
@@ -6002,7 +6002,7 @@ INSERT INTO vet_specialties VALUES (2996,1);
 INSERT INTO vet_specialties VALUES (2997,2);
 INSERT INTO vet_specialties VALUES (2998,1);
 INSERT INTO vet_specialties VALUES (2999,1);
-INSERT INTO vet_specialties VALUES (3000,1);*/
+INSERT INTO vet_specialties VALUES (3000,1);
 
 INSERT INTO types VALUES (1, 'cat');
 INSERT INTO types VALUES (2, 'dog');
