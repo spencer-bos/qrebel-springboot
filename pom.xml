@@ -37,6 +37,10 @@
       <qrebelAppName>${appName}</qrebelAppName>
       <!--suppress UnresolvedMavenProperty -->
       <qrebelAppBuild>${appBuild}</qrebelAppBuild>
+      <!--suppress UnresolvedMavenProperty -->
+      <qrebelAuthToken>${appAuthToken}</qrebelAuthToken>
+      <!--suppress UnresolvedMavenProperty -->
+      <qrebelAppId>${appId}</qrebelAppId>
   </properties>
 
   <dependencies>
@@ -223,7 +227,7 @@
                 <configuration>
                     <skip>${skipITs}</skip>
                     <agent>${qrebelAgentPath}</agent>
-                    <jvmArguments>-Dqrebel.app.name=${qrebelAppName} -Dqrebel.app.build=${qrebelAppBuild}</jvmArguments>
+                    <jvmArguments>-Dqrebel.auth_token=${qrebelAuthToken} -Dqrebel.app.id=${qrebelAppId} -Dqrebel.app.name=${qrebelAppName} -Dqrebel.app.build=${qrebelAppBuild}</jvmArguments>
                 </configuration>
             </execution>
             <execution>
