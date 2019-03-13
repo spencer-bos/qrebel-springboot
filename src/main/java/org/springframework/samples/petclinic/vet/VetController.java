@@ -63,29 +63,29 @@ class VetController {
         Map<String, Integer> specialityStats = new HashMap<>();
         initStats(specialityStats);
 
-//        getStatsBadPerformance(specialityStats);
-        getStatsGoodPerformance(specialityStats, vets);
+        getStatsBadPerformance(specialityStats);
+//        getStatsGoodPerformance(specialityStats, vets);
 
         return specialityStats;
     }
 
-//    private void getStatsBadPerformance(Map<String, Integer> specialityStats) {
-//        // This is unoptimized code, which gets ids of all Vets in DB
-//        // and then queries for each record one by one
-//        List<Integer> vetIds = this.vets.getAllIds();
-//
-//        vetIds.forEach(vetId -> {
-//            Vet vetById = this.vets.getVetById(vetId); // Querying DB for each veterinary by ID - excessive IO
-//            countStats(specialityStats, vetById);
-//        });
-//    }
+    private void getStatsBadPerformance(Map<String, Integer> specialityStats) {
+        // This is unoptimized code, which gets ids of all Vets in DB
+        // and then queries for each record one by one
+        List<Integer> vetIds = this.vets.getAllIds();
 
-    private void getStatsGoodPerformance(Map<String, Integer> specialityStats, Vets vets) {
-        // This is optimized version. We already have collection of all veterinarians so we will work with it instead
-        // of querying database again
-
-        vets.getVetList().forEach(vet -> countStats(specialityStats, vet));
+        vetIds.forEach(vetId -> {
+            Vet vetById = this.vets.getVetById(vetId); // Querying DB for each veterinary by ID - excessive IO
+            countStats(specialityStats, vetById);
+        });
     }
+//
+//    private void getStatsGoodPerformance(Map<String, Integer> specialityStats, Vets vets) {
+//        // This is optimized version. We already have collection of all veterinarians so we will work with it instead
+//        // of querying database again
+//
+//        vets.getVetList().forEach(vet -> countStats(specialityStats, vet));
+//    }
 
     private void initStats(Map<String, Integer> specialityStats) {
         specialityStats.put("radiology", 0);
