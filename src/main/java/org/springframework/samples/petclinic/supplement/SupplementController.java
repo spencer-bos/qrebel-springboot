@@ -77,7 +77,7 @@ public class SupplementController {
         }
 
         try {
-            String spec = "http://127.0.0.1:8889/supplements/";
+            String spec = "127.0.0.1:8889/supplements/";
             System.out.println("Calling to " + spec);
 
             URL url = new URL(spec);
