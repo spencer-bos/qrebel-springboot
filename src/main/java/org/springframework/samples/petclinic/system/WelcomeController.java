@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 class WelcomeController {
 
     private static final String MESSAGE = "> BEST DAY <";
-//    private static final String MESSAGE = "> " + Days.TUESDAY.name() + " <";
+//    private static final String MESSAGE = "> " + Days.WEDNESDAY.name() + " <";
 
     @GetMapping("/")
     public ModelAndView welcome() {
@@ -18,7 +18,12 @@ class WelcomeController {
         return model;
     }
 
-/*    public enum Days {
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
-    }*/
+//        @GetMapping("/")
+//        public String welcome() {
+//            return "welcome";
+//    }
+
+//    public enum Days {
+//        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
+//    }
 }

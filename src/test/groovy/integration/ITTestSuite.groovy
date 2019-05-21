@@ -8,10 +8,11 @@ import org.junit.runner.RunWith
 import org.junit.runners.Suite
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses([
-        ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class, ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class, ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class
-])
+@Suite.SuiteClasses([ ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class ])
 
 public class ITTestSuite {
 
 }
+
+
+//ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class, ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class
