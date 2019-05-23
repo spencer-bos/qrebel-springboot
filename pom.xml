@@ -226,8 +226,8 @@
                         </goals>
                         <configuration>
                             <skip>${skipITs}</skip>
-                            <agent>${qrebelAgentPath}</agent>
-                            <jvmArguments>-Dqrebel.auth_token=${qrebelAuthToken} -Dqrebel.app.id=${qrebelAppId} -Dqrebel.app.name=${qrebelAppName} -Dqrebel.app.build=${qrebelAppBuild}</jvmArguments>
+                            <!--<agent>${qrebelAgentPath}</agent>-->
+                            <jvmArguments>-javaagent:${qrebelAgentPath} -Dqrebel.auth_token=${qrebelAuthToken} -Dqrebel.app.id=${qrebelAppId} -Dqrebel.app.name=${qrebelAppName} -Dqrebel.app.build=${qrebelAppBuild}</jvmArguments>
                         </configuration>
                     </execution>
                     <execution>
