@@ -227,7 +227,7 @@
                         <configuration>
                             <skip>${skipITs}</skip>
                             <agent>${qrebelAgentPath}</agent>
-                            <jvmArguments>-javaagent:/Users/spencer.bos/Documents/Workspace/Web_Projects/TeamCity/buildAgent/work/6b7b6925431c0ad2/qrebel-agent.jar -Dqrebel.auth_token=${qrebelAuthToken} -Dqrebel.app.id=${qrebelAppId} -Dqrebel.app.name=${qrebelAppName} -Dqrebel.app.build=${qrebelAppBuild}</jvmArguments>
+                            <jvmArguments>-javaagent:/Users/spencer.bos/Documents/Workspace/Web_Projects/TeamCity/buildAgent/work/6b7b6925431c0ad2/qrebel-agent.jar</jvmArguments>
                         </configuration>
                     </execution>
                     <execution>
