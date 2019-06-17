@@ -139,7 +139,7 @@ public class SupplementController {
         model.put("supplements", results);
         LOG.info("I am fine.");
         LOG.warn("I love programming.");
-        LOG.error(null, new Exception("some error"));
+//        LOG.error(null, new Exception("some error"));
         LOG.trace("This is the tracing feature");
         LOG.debug("The debug feature");
         LOG.debug(results.toString());
@@ -179,7 +179,7 @@ public class SupplementController {
     private String getRemoteSupplementsJson() {
         StringBuilder sb = new StringBuilder();
         try {
-            String spec = "http://192.168.15.255:8888/supplements/";
+            String spec = "http://192.168.14.89:8888/supplements/";
             System.out.println("Calling to " + spec);
 
             URL url = new URL(spec);
