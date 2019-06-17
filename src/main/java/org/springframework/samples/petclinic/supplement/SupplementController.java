@@ -152,8 +152,8 @@ public class SupplementController {
             Refactored the way we store our supplements. All data is now kept
             on a remote MongoDB instance. No more local data storage here!
          */
-        String json = getLocalSupplementsJSon();
-//        String json = getRemoteSupplementsJson();
+//        String json = getLocalSupplementsJSon();
+        String json = getRemoteSupplementsJson();
 
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -179,7 +179,7 @@ public class SupplementController {
     private String getRemoteSupplementsJson() {
         StringBuilder sb = new StringBuilder();
         try {
-            String spec = "http://" + host + ":8889/supplements/";
+            String spec = "http://127.0.0.1:8888/supplements/";
             System.out.println("Calling to " + spec);
 
             URL url = new URL(spec);
