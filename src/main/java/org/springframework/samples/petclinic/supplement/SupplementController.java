@@ -179,7 +179,7 @@ public class SupplementController {
     private String getRemoteSupplementsJson() {
         StringBuilder sb = new StringBuilder();
         try {
-            String spec = "http://127.0.0.1:8888/supplements/";
+            String spec = "http://192.168.15.255:8888/supplements/";
             System.out.println("Calling to " + spec);
 
             URL url = new URL(spec);
