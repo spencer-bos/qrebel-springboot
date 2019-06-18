@@ -181,7 +181,12 @@ public class SupplementController {
         try {
             String spec = "http://192.168.14.89:8888/supplements/";
             System.out.println("Calling to " + spec);
-
+//          adding a thread sleep
+            try {
+                Thread.sleep(2000);
+            }
+            catch(Exception e) {
+            }
             URL url = new URL(spec);
             URLConnection urlConnection = url.openConnection();
             InputStream inputStream = urlConnection.getInputStream();

@@ -70,6 +70,12 @@ class VetController {
     }
 
     private void getStatsBadPerformance(Map<String, Integer> specialityStats) {
+//        adding a thread sleep
+        try {
+            Thread.sleep(2000);
+        }
+        catch(Exception e) {
+        }
         // This is unoptimized code, which gets ids of all Vets in DB
         // and then queries for each record one by one
         List<Integer> vetIds = this.vets.getAllIds();
