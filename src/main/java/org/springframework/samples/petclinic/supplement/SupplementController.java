@@ -179,7 +179,10 @@ public class SupplementController {
     private String getRemoteSupplementsJson() {
         StringBuilder sb = new StringBuilder();
         try {
-            String spec = "http://192.168.14.89:8888/supplements/";
+//            for local usage please use the below code
+            String spec = "http://" + host + ":8888/supplements/";
+//            if I am using docker for jenkins build use the below code
+//            String spec = "http://192.168.14.89:8888/supplements/";
             System.out.println("Calling to " + spec);
 //          adding a thread sleep
             try {
