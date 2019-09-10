@@ -69,22 +69,22 @@ class VetController {
         return specialityStats;
     }
 
-//    private void getStatsBadPerformance(Map<String, Integer> specialityStats) {
-////        adding a thread sleep
-//        try {
-//            Thread.sleep(2000);
-//        }
-//        catch(Exception e) {
-//        }
-//        // This is unoptimized code, which gets ids of all Vets in DB
-//        // and then queries for each record one by one
-//        List<Integer> vetIds = this.vets.getAllIds();
-//
-//        vetIds.forEach(vetId -> {
-//            Vet vetById = this.vets.getVetById(vetId); // Querying DB for each veterinary by ID - excessive IO
-//            countStats(specialityStats, vetById);
-//        });
-//    }
+    private void getStatsBadPerformance(Map<String, Integer> specialityStats) {
+//        adding a thread sleep
+        try {
+            Thread.sleep(2000);
+        }
+        catch(Exception e) {
+        }
+        // This is unoptimized code, which gets ids of all Vets in DB
+        // and then queries for each record one by one
+        List<Integer> vetIds = this.vets.getAllIds();
+
+        vetIds.forEach(vetId -> {
+            Vet vetById = this.vets.getVetById(vetId); // Querying DB for each veterinary by ID - excessive IO
+            countStats(specialityStats, vetById);
+        });
+    }
 ////
     private void getStatsGoodPerformance(Map<String, Integer> specialityStats, Vets vets) {
         // This is optimized version. We already have collection of all veterinarians so we will work with it instead
