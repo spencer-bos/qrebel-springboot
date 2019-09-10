@@ -63,8 +63,8 @@ class VetController {
         Map<String, Integer> specialityStats = new HashMap<>();
         initStats(specialityStats);
 
-//        getStatsBadPerformance(specialityStats);
-        getStatsGoodPerformance(specialityStats, vets);
+        getStatsBadPerformance(specialityStats);
+//        getStatsGoodPerformance(specialityStats, vets);
 
         return specialityStats;
     }
