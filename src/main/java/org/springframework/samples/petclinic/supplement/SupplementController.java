@@ -152,8 +152,8 @@ public class SupplementController {
             Refactored the way we store our supplements. All data is now kept
             on a remote MongoDB instance. No more local data storage here!
          */
-        String json = getLocalSupplementsJSon();
-//        String json = getRemoteSupplementsJson();
+//        String json = getLocalSupplementsJSon();
+        String json = getRemoteSupplementsJson();
 
         try {
             ObjectMapper mapper = new ObjectMapper();
