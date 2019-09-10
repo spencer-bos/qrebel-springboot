@@ -12,7 +12,8 @@ import org.junit.runners.Suite
 
 public class ITTestSuite {
 
+    ZMain.
+
+class , ZSupplements.class, ZOwners.class, ZAVet .class, ZMain.class, ZSupplements.class , ZOwners.class, ZAVet.class
+
 }
-
-
-//ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class, ZMain.class, ZSupplements.class, ZOwners.class, ZAVet.class
