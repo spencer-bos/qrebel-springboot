@@ -16,11 +16,11 @@ class WelcomeController {
         model.addObject("day", MESSAGE);
         model.setViewName("welcome");
 //        adding a thread sleep
-        try {
-            Thread.sleep(2000);
-        }
-        catch(Exception e) {
-        }
+//        try {
+//            Thread.sleep(2000);
+//        }
+//        catch(Exception e) {
+//        }
 
         return model;
     }
