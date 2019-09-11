@@ -77,11 +77,11 @@ class OwnerController {
     @GetMapping("/owners")
     public String processFindForm(Owner owner, BindingResult result, Map<String, Object> model) {
        //adding a thread sleep
-//        try {
-//            Thread.sleep(2000);
-//        }
-//        catch(Exception e) {
-//        }
+        try {
+            Thread.sleep(2000);
+        }
+        catch(Exception e) {
+        }
         // allow parameterless GET request for /owners to return all records
         if (owner.getLastName() == null) {
             owner.setLastName(""); // empty string signifies broadest possible search
